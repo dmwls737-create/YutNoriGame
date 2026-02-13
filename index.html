@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <h1>윳놀이 게임</h1>
+        <div class="playground">
+            <img src="./images/game_bg.svg" alt="bg" draggable="false">
+            <div class="piece_boards">
+                <div class="result"></div> <!-- 도착 성공시 위치 -->
+                <div class="players">
+                    <div class="blue"><span></span><span></span><span></span></div>
+                    <div class="red"><span></span><span></span><span></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="randombox"><img src="./images/front.svg" alt=""></div>
+        <div class="control">
+            <div class="info">청팀이 던질 차례입니다.</div>
+            <button class="btn">윷 던지기</button>
+            <button class="resetbtn">재시작</button>
+        </div>
+    </div>
+    <script src="./jquery-3.7.1.js"></script>
+    <script src="./jquery-ui.js"></script>
+    <script src="./jquery.easing.1.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+</html>
