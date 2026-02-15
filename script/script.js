@@ -1,6 +1,7 @@
 $(function(){
     let currentTurn='blue';
     const resultTexts=['','도','개','걸','윳','모'];
+    const resultnums=['','1','2','3','4','5'];
     let turnChangeTimer=null;
     function updateTurnMessage(){ //info에 턴 안내 메세지 변경 함수
         const teamName=(currentTurn==='blue') ? '청팀':'홍팀'; //현재 턴이 blue라면 청팀, 아니라면 홍팀으로
@@ -16,16 +17,21 @@ $(function(){
         updateTurnMessage();
     }
     function showResult(num, extraTurn){ //랜덤 (1~5)값과 추가 턴 판단 (true/false)인자로 결과 출력
-        const teamName = (currentTurn==='blue') ? '청팀':'홍팀';
-        const color=(currentTurn==='blue') ? '#46e':'#c43'; //현재 턴이 blue면 청팀, 글자색 정의 red면 홍팀, 글자색 정의
-        const resultText=resultTexts[num]; //랜덤값으로 배열 요소 값 호출 (1~5qjsWo '도'~'모' 중 하나)
-        let message=teamName+'-'+resultText; //팀명-결과 형식의 문자열 구성
-        if(extraTurn){ //추가 턴 판단이 있다면
-            message+='(한 번 더!)'; //결과 메세지 뒤에 (한 번 더) 추가
+        let imgsrc=`./images/${num}.svg`;
+        $('.playground>.piece_boards>.result').find('img').attr('src',imgsrc);
+        // const teamName = (currentTurn==='blue') ? '청팀':'홍팀';
+        // const color=(currentTurn==='blue') ? '#46e':'#c43'; //현재 턴이 blue면 청팀, 글자색 정의 red면 홍팀, 글자색 정의
+        // const resultText=resultTexts[num]; //랜덤값으로 배열 요소 값 호출 (1~5qjsWo '도'~'모' 중 하나)
+        // let message=`<img src="./images/${num}.svg" alt="result">`; //팀명-결과 형식의 문자열 구성
+        const teamName=(currentTurn==='blue') ? '청팀':'홍팀';
+        const color=(currentTurn==='blue') ? '#46e':'#c43';
+        const resultText=resultnums[num]+'칸 이동해 주세요.';
+        let message=teamName+'은 '+resultText;
+        if(extraTurn){
+            message+='';
         }
         $('.control>.info').html(message).css({
-            'background':(currentTurn==='blue') ? '#eef':'#fee',
-            'color':color
+            'background':(currentTurn==='blue') ? '#eef':'#fee','color':color
         });
     }
     // showResult(4,true); (test)
