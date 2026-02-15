@@ -7,16 +7,25 @@ h1{padding:12px 0; text-align:center; font-size:20px;}
 .playground>.piece_boards{
     margin-top:24px; display:flex; justify-content:center; gap:20px;
 }
-.playground>.piece_boards>.result{height:80px; width:150px; border:2px solid #900;}
-.playground>.piece_boards>.players{height:80px; width:150px; border:2px solid #009; position:relative; left:0; top:0;}
-.playground>.piece_boards>.players>div{height:40px; box-sizing:border-box;}
-.playground>.piece_boards>.players>.blue{border-bottom:1px solid #009;}
-.playground>.piece_boards>.players>div>span{
+.playground>.piece_boards>.result{
+    height:130px; width:150px; margin-top:-20px;
+}
+.playground>.piece_boards>.result>img{z-index:1000;}
+.playground>.piece_boards>.players{
+    height:100px; width:150px; position:relative; left:0; top:0;
+    background:url("../images/pan.png") no-repeat center; background-size:100%;
+}
+.playground>.piece_boards>.players>div{height:40px; box-sizing:border-box; text-align:center;}
+.playground>.piece_boards>.players>.pan>.blue{padding-top:6px;}
+.playground>.piece_boards>.players>.pan>div>span{
     display:inline-block; width:30px; height:30px; margin:5px; border-radius:50%;
     box-shadow:0 3px 6px rgba(0,0,0,0.3);
 }
-.playground>.piece_boards>.players>.blue>span{background:url("../images/blue.png") no-repeat center; background-size:30px 30px;}
-.playground>.piece_boards>.players>.red>span{background:url("../images/red.png") no-repeat center; background-size:30px 30px;}
+.playground>.piece_boards>.players>.pan{
+    width:150px; height:100px; position:absolute; left:0; top:0;
+}
+.playground>.piece_boards>.players>.pan>.blue>span{background:url("../images/blue.png") no-repeat center; background-size:30px 30px;}
+.playground>.piece_boards>.players>.pan>.red>span{background:url("../images/red.png") no-repeat center; background-size:30px 30px;}
 .ui-draggable-dragging{
     transform:scale(1.2); box-shadow:0 5px 15px rgba(0,0,0,0.5); z-index:100 !important;
 }
@@ -29,10 +38,10 @@ h1{padding:12px 0; text-align:center; font-size:20px;}
     background:#eef; color:#46e; text-align:center; padding:6px 0;
 }
 .control>button{
-    display:block; margin-bottom:20px; padding:10px 40px; font-size:18px; font-weight:bold;
-    border:0 none; border-radius:109px; background:#4caf50; color:#fff;
-    box-shadow:0 4px 8px rgba(0,0,0,0.2); width:100%; box-sizing:border-box;
+    width:300px; height:60px; display:block; margin-bottom:20px; padding:10px 40px; font-size:18px; font-weight:bold;
+    border:0 none; background:url("../images/button1.png") no-repeat center; background-size:contain;
+    color:#fff; width:100%; box-sizing:border-box; 
 }
-.control>.resetbtn{background-color:#eb6c14;}
-.control>.resetbtn:active{background-color:#eb5a14;}
-.control>.btn:active{background:#45a049;}
+.control>.resetbtn{background:url("../images/reset.png") no-repeat center; background-size:contain;}
+.control>.resetbtn:active{background:url("../images/reset2.png") no-repeat center; background-size:contain;}
+.control>.btn:active{background:url("../images/button2.png") no-repeat center; background-size:contain;}
