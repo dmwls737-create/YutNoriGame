@@ -66,7 +66,7 @@ $(function(){
                 alert(droppedTeam+'팀이 '+targetTeam+'팀 말을 잡았습니다')
                 //말을 잡은 팀 추가 기회
                 currentTurn=droppedTeam; //드래그
-                turnChangeTimer=setTimeout(updateTrunMessage, 2000);
+                turnChangeTimer=setTimeout(updateTurnMessage, 2000);
             }
         }
     })
